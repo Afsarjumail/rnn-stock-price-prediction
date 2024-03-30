@@ -5,22 +5,28 @@
 To develop a Recurrent Neural Network model for stock price prediction.
 
 ## Problem Statement and Dataset
+<div align="justify">
+  
+- Develop a **Recurrent Neural Network (RNN)** model to predict the stock prices of Google. The goal is to train the model using historical stock price data and then evaluate its performance on a separate test dataset.
 
+- **Dataset**: The dataset consists of two CSV files:
+  - **Trainset.csv**: This file contains historical stock price data of Google, which will be used for training the RNN model. It includes features such as the opening price of the stock.
+  - **Testset.csv**: This file contains additional historical stock price data of Google, which will be used for testing the trained RNN model. Similarly, it includes features such as the opening price of the stock.
+
+- The objective is to build a model that can effectively learn from the patterns in the training data to make accurate predictions on the test data.
+<div/>
 
 ## Design Steps
-
-### Step 1:
-Write your own steps
-
-### Step 2:
-
-### Step 3:
-
+- **Step 1:** Read and preprocess training data, including scaling and sequence creation.
+- **Step 2:** Initialize a Sequential model and add SimpleRNN and Dense layers.
+- **Step 3:** Compile the model with Adam optimizer and mean squared error loss.
+- **Step 4:** Train the model on the prepared training data.
+- **Step 5:** Preprocess test data, predict using the trained model, and visualize the results.
 
 
 ## Program
-#### Name:
-#### Register Number:
+#### Name: AFSAR JUMAIL S
+#### Register Number: 212222240004
 ```
 import numpy as np
 import matplotlib.pyplot as plt
@@ -70,6 +76,8 @@ dataset_test = pd.read_csv('testset.csv')
 test_set = dataset_test.iloc[:,1:2].values
 test_set.shape
 dataset_total = pd.concat((dataset_train['Open'],dataset_test['Open']),axis=0)
+```
+```
 inputs = dataset_total.values
 inputs = inputs.reshape(-1,1)
 inputs_scaled=sc.transform(inputs)
@@ -93,14 +101,13 @@ plt.ylabel('Google Stock Price')
 plt.legend()
 plt.show()
 ```
+
+
 ## Output
-
 ### True Stock Price, Predicted Stock Price vs time
-
-Include your plot here
-
+![Screenshot 2024-03-30 134002](https://github.com/Afsarjumail/rnn-stock-price-prediction/assets/118343395/0224e76d-6e4e-429d-b62d-7e1a835fe4ac)
 ### Mean Square Error
-
-Include the mean square error
-
+![Screenshot 2024-03-30 134045](https://github.com/Afsarjumail/rnn-stock-price-prediction/assets/118343395/853c5979-77f6-4735-a791-6c29bcb6031f)
+![Screenshot 2024-03-30 134055](https://github.com/Afsarjumail/rnn-stock-price-prediction/assets/118343395/5c216cd0-1526-4487-bb96-20b811c4d060)
 ## Result
+Thus a Recurrent Neural Network model for stock price prediction is done.
