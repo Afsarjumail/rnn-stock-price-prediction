@@ -109,5 +109,6 @@ plt.show()
 ### Mean Square Error
 ![Screenshot 2024-03-30 134045](https://github.com/Afsarjumail/rnn-stock-price-prediction/assets/118343395/853c5979-77f6-4735-a791-6c29bcb6031f)
 ![Screenshot 2024-03-30 134055](https://github.com/Afsarjumail/rnn-stock-price-prediction/assets/118343395/5c216cd0-1526-4487-bb96-20b811c4d060)
+
 ## Result
 Thus a Recurrent Neural Network model for stock price prediction is done.
